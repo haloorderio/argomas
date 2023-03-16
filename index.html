@@ -50,35 +50,60 @@
                 <div class="text-center">
                     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
                         <style>
-                        .mySlides {display:none;}
-                        </style>
-                        <body>
+                            .mySlides {display:none;}
 
-                        <div class="w3-content w3-section" style="max-width:500px">
+                            * {box-sizing: border-box;}
+                            body {font-family: Verdana, sans-serif;}
+                            .mySlides {display: none;}
+                            img {vertical-align: middle;}
+
+                            /* Slideshow container */
+                            .slideshow-container {
+                              max-width: 1000px;
+                              position: relative;
+                              margin: auto;
+                            }
+
+                            /* On smaller screens, decrease text size */
+                            @media only screen and (max-width: 300px) {
+                              .text {font-size: 11px}
+                            }
+
+                        </style>
+                    <body>
+
+                        <div class="w3-content w3-section; slideshow-container">
                           <img class="mySlides w3-animate-right" src="assets/img/slider-argomas-1.png" style="width:100%">
                           <img class="mySlides w3-animate-right" src="assets/img/slider-argomas-2.png" style="width:100%">
                           <img class="mySlides w3-animate-right" src="assets/img/slider-argomas-3.png" style="width:100%">
                           <img class="mySlides w3-animate-right" src="assets/img/slider-argomas-4.png" style="width:100%">
                         </div>
+                        <br>
+                        <div style="text-align:center">
+                          <span class="dot"></span> 
+                          <span class="dot"></span> 
+                          <span class="dot"></span> 
+                          <span class="dot"></span> 
+                        </div>
 
-                        <script>
-                        var myIndex = 0;
-                        carousel();
+                                <script>
+                                var myIndex = 0;
+                                carousel();
 
-                        function carousel() {
-                          var i;
-                          var x = document.getElementsByClassName("mySlides");
-                          for (i = 0; i < x.length; i++) {
-                            x[i].style.display = "none";  
-                          }
-                          myIndex++;
-                          if (myIndex > x.length) {myIndex = 1}    
-                          x[myIndex-1].style.display = "block";  
-                          setTimeout(carousel, 2000);    
-                        }
-                        </script>
+                                function carousel() {
+                                  var i;
+                                  var x = document.getElementsByClassName("mySlides");
+                                  for (i = 0; i < x.length; i++) {
+                                    x[i].style.display = "none";  
+                                  }
+                                  myIndex++;
+                                  if (myIndex > x.length) {myIndex = 1}    
+                                  x[myIndex-1].style.display = "block";  
+                                  setTimeout(carousel, 2000);    
+                                }
+                                </script>
 
-                        </body>
+                    </body>
                 </div>
             </div>
         </section>
