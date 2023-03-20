@@ -348,13 +348,26 @@
                     </p>
                 </div>
                 <div class="container">
-                          <form action="https://formspree.io/f/mbjealvr" method="post">
-                              <label for="fullname">Full Name</label>
-                              <label for="email">Your Email</label>
-                              <label for="subject">Your Subject</label>
-                              <input name="Email" id="email" type="email">
-                              <button type="submit">Submit</button>
-                          </form>
+                          <!-- modify this form HTML and place wherever you want your form -->
+                            <form
+                              action="https://formspree.io/f/mbjealvr"
+                              method="POST"
+                            >
+                              <label>
+                                Full name:
+                                <input type="name" name="Your full name">
+                              </label>
+                              <label>
+                                Your email:
+                                <input type="email" name="email">
+                              </label>
+                              <label>
+                                Your message:
+                                <textarea name="message"></textarea>
+                              </label>
+                              <!-- your other form fields go here -->
+                              <button type="submit">Send</button>
+                            </form>
                 </div>
             </div>
         </section>
